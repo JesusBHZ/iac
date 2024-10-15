@@ -1,0 +1,19 @@
+services:
+- type: web
+  name: aplicacion_web
+  runtime: python
+  repo: https://github.com/JesusBHZ/api_rest.git
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python web/app.py
+
+- type: web
+  name: api_rest
+  runtime: python
+  repo: https://github.com/JesusBHZ/aplicacion_web.git
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: fastapi dev app/main.py
+version: "1"
