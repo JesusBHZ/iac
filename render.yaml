@@ -15,5 +15,5 @@ services:
   plan: free
   region: oregon
   buildCommand: pip install -r requirements.txt
-  startCommand: cd app && fastapi dev main.py --port 8000
+  startCommand: fastapi run app/main.py 
 version: "1"
