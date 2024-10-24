@@ -15,7 +15,7 @@ services:
   plan: free
   region: oregon
   buildCommand: pip install -r requirements.txt
-  startCommand: cd web && uvicorn main:app --reload
+  startCommand: cd app && uvicorn main:app --reload
 
 databases:
 - name: agenda2
