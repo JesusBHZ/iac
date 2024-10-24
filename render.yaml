@@ -15,7 +15,7 @@ services:
   plan: free
   region: oregon
   buildCommand: pip install -r requirements.txt
-  startCommand: fastapi run app/main.py 
+  startCommand: cd web && uvicorn main:app --reload
 
 databases:
 - name: agenda2
