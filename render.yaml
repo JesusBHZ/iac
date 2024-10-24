@@ -16,4 +16,16 @@ services:
   region: oregon
   buildCommand: pip install -r requirements.txt
   startCommand: fastapi run app/main.py 
+
+databases:
+- name: agenda2
+  databaseName: db_agenda_sd8j
+  user: user
+  plan: free
+  region: oregon
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "16"
+
 version: "1"
