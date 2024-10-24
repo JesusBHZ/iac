@@ -15,7 +15,7 @@ services:
   plan: free
   region: oregon
   buildCommand: pip install -r requirements.txt
-  startCommand: cd app && uvicorn main:app --reload
+  startCommand: cd app && uvicorn main:app --host 0.0.0.0 --port 8000
 
 databases:
 - name: agenda
